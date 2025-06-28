@@ -1,0 +1,28 @@
+{
+  "name": "Facebook Notifier V2",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Reloads Facebook Free Marketplace and scans for specific items.",
+  "permissions": ["scripting", "tabs", "storage", "downloads", "alarms"],
+  "host_permissions": ["https://www.facebook.com/marketplace/category/free"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Facebook Notifier V2"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/marketplace/category/free"],
+      "js": ["content_marketplace.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://www.facebook.com/?filter=groups&sk=h_chr"],
+      "js": ["content_notifications.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

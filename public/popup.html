@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Facebook Notifier</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 10px;
+        width: 200px;
+      }
+      input {
+        width: 100%;
+        margin-top: 5px;
+      }
+      button {
+        width: 48%;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="interval">Interval (seconds):</label>
+    <input type="number" id="interval" min="5" value="60" />
+
+    <button id="saveData">Save Seen Items</button>
+    <button id="loadData">Load Seen Items</button>
+    <input type="file" id="loadFile" style="display: none;" />
+
+    <div style="display: flex; justify-content: space-between">
+      <button id="start">Start</button>
+      <button id="stop">Stop</button>
+    </div>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

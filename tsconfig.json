@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",  // Set target to ES2017 or later
+    "lib": ["ES2020", "DOM"],  // Include ES2017 and DOM libraries
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}
